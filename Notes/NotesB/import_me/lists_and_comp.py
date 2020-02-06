@@ -160,7 +160,7 @@ print(my_sums)
 
 
 # make a list from the 100 rolls that shows only the doubles
-
+print ("y")
 my_dpubles = [x for x in my_list if x[0] == x[1]]
 print(my_dpubles)
 

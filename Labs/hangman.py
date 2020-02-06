@@ -16,7 +16,10 @@
 # if the user gets all the correct letters, tell the user they won
 
 # ask if they want to play again
+import random
 
+word_list =["Meerkat","Lion","Squirrel","Snow Leopard","Dog","Red Panda","Raccoon","Tiger","Monkey","Wolf","Cat","Eagle","Owl","Butterfly","Polar Bear","Kookaburra","Hamster","Bird","Guinea Pig","Tortoise","Alligator","Stork","Egret","Sea Lion","Rabbit","Turtle","Ibis","Finch","Panther","Penguin","Dinosaur","Deer","Sheep","Shrimp","Lobster","Starfish"]
+choose_word =
 gallows = [
     '''
       +---+
