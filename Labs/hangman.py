@@ -87,3 +87,15 @@ gallows = [
     ]
 
 print(gallows[4])
+
+
+print("Hello\nWorld")
+
+
+alphabet = [chr(x) for x in range(65, 65 + 26)]
+print(alphabet)
+
+random.shuffle(alphabet)
+print(alphabet)
+
+
