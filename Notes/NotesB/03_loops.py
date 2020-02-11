@@ -19,7 +19,7 @@ for number in my_list:
     print(number)
     if number > 10:
         break  # forces out of nearest loop
-
+print("hey")
 # CONTINUE
 for number in my_list:
     if number % 7 == 0:
