@@ -15,7 +15,7 @@ print(my_list)
 # d) Make a list of all positive numbers in my_list below.
 my_list = [-77, -78, 82, 81, -40, 2, 62, 65, 74, 48, -37, -52, 90, -84, -79, -45, 47, 60, 35, -18]
 
-my_copy = [x for x in my_list if x % 2 == 0]
+my_copy = [x for x in my_list if x > 0]
 print(my_copy)
 
 

@@ -103,19 +103,30 @@ letters_gotten = []
 print("Hello and Welcome to hang man! This version is Animal based. Have fun")
 while not done:
     guess = input("Choose a letter: ")
-    print("The letters you have used are", letters_used)
+    print("The letters you have used are", end = ": ")
+
+    for letter in letters_used: print(letter, end=" ")
+    print()
+
     print("You have", 6 - len(letters_misses), "lives left")
+
+
+    if guess.upper() in choose_word:
+        letters_gotten.append(guess.upper())
+        letters_used.append(guess.upper())
+    elif guess == " ":
+        print(" ", end=" ")
+    else:
+        letters_used.append(guess.upper())
+        letters_misses.append(guess.upper())
+        print("_", end=" ")
+
     for letter in choose_word:
-        if guess.upper() == letter in choose_word:
-            letters_gotten.append(guess.upper())
-            letters_used.append(guess.upper())
+        if letter in letters_used:
             print(letter, end=" ")
         else:
-            letters_used.append(guess.upper())
-            letters_misses.append(guess.upper())
             print("_", end=" ")
-
-
+    print()
 
 
 

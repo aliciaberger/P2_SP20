@@ -4,11 +4,12 @@
 file = open('../resources/super_villains.txt', 'r')  # open to read
 print(file)
 
+print("1")
 for line in file:
     print(line.strip())
 
 file.close()
-
+print("1")
 # .strip() method removes the extra characters at end of text
 print("    Hello ".strip())
 print("World\n".strip())
