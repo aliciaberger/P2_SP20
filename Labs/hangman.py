@@ -86,29 +86,34 @@ print(gallows[0])
 
 
 alphabet = [chr(x) for x in range(65, 65 + 26)]
-print(alphabet)
+#print(alphabet)
 
 random.shuffle(alphabet)
-print(alphabet)
+#print(alphabet)
 
 import random
 done = False
-word_list =["Meerkat","Lion","Squirrel","Snow Leopard","Dog","Red Panda","Raccoon","Tiger","Monkey","Wolf","Cat","Eagle","Owl","Butterfly","Polar Bear","Kookaburra","Hamster","Bird","Guinea Pig","Tortoise","Alligator","Stork","Egret","Sea Lion","Rabbit","Turtle","Ibis","Finch","Panther","Penguin","Dinosaur","Deer","Sheep","Shrimp","Lobster","Starfish"]
+word_list =["Horse",  "Meerkat","Lion","Squirrel","Snow Leopard","Woodpecker", "Dog","Red Panda","Raccoon","Tiger","Monkey", "Humming Bird", "Wolf","Cat","Eagle","Owl","Butterfly","Polar Bear","Kookaburra","Hamster","Bird","Guinea Pig","Tortoise","Alligator","Stork","Egret","Sea Lion","Rabbit","Turtle","Ibis","Finch","Panther","Penguin","Dinosaur","Deer","Sheep","Shrimp","Lobster","Starfish"]
 choose_word = word_list.pop(random.randrange(len(word_list))).upper()
-print(choose_word)
 letters_used = []
 letters_misses = []
 letters_gotten = []
-
-print("Hello and Welcome to hang man! This version is Animal based. Have fun")
+print(choose_word)
+print("Hello and Welcome to hang man! This version is Animal based. Have fun.")
 while not done:
-    guess = input("Choose a letter: ")
-    print("The letters you have used are", end = ": ")
+
+    if len(letters_misses) == 7:
+        print("You lost!")
+        done = True
+
+    guess = input("Choose a letter then press enter: ")
+    print("The letters you have used are", end = " ")
 
     for letter in letters_used: print(letter, end=" ")
     print()
 
     print("You have", 6 - len(letters_misses), "lives left")
+    print(gallows[0 + len(letters_misses)])
 
 
     if guess.upper() in choose_word:
@@ -126,17 +131,6 @@ while not done:
             print(letter, end=" ")
         else:
             print("_", end=" ")
+
     print()
-
-
-
-
-
-
-
-
-
-
-
-
 

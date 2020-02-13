@@ -88,3 +88,4 @@ for num in num_list:
 print("There are", pal, "palindromes")
 
 
+#project Euler

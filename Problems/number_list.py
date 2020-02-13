@@ -5,3 +5,6 @@ num_list = [2283, 5395, 1911, 1256, 9572, 3707, 9921, 4980, 5094, 7560, 2124, 70
 if __name__ == "__main__":
     print([random.randrange(1000, 10000) for x in range(1000)])
     print([random.randrange(-100, 100) for x in range(20)])
+
+
+
