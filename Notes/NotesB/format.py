@@ -23,5 +23,3 @@ for i in range(20):
 for i in range(20):
     c = random.randrange()
     print("{:11.5f}".format(c))
-
-

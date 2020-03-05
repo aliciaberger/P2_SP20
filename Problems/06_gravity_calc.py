@@ -14,6 +14,22 @@
 # (2pts) keeps asking for inputs until they are valid (see while loop from notes)
 # (3pts) calculates the force of gravity in Newtons and print the result to the user in scientific notation to two decimals.
 
+def gravity():
+
+    done = False
+    G = (6.67e-11)
+    while not done:
+        m1 = input("Enter mass 1: ")
+        m2 = input("Enter mass 2: ")
+        r = input("Enter radius: ")
+        try:
+           F = G * (m1 * m2) / r**2
+           print(F)
+           done = True
+        except:
+            print("a number you have entered is not valid")
+
+gravity()
 
 
 
