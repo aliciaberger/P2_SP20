@@ -19,15 +19,18 @@ def gravity():
     done = False
     G = (6.67e-11)
     while not done:
-        m1 = input("Enter mass 1: ")
-        m2 = input("Enter mass 2: ")
-        r = input("Enter radius: ")
+
         try:
-           F = G * (m1 * m2) / r**2
-           print(F)
-           done = True
-        except:
-            print("a number you have entered is not valid")
+            m1 = int(input("Enter mass 1: "))
+            m2 = int(input("Enter mass 2: "))
+            r = int(input("Enter radius: "))
+            print(G * (m1 * m2) / r**2)
+            done = True
+        except ValueError as e:
+           print("Invalid conversion")
+           print(e)
+        except ZeroDivisionError as e:
+            print("Error:", e)
 
 gravity()
 
