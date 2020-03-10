@@ -15,31 +15,8 @@ my_screen = turtle.Screen()
 my_screen.bgcolor('white')
 
 # draw a shape using goto method (red square)
-my_turtle.fillcolor('red')
-my_turtle.begin_fill()  # starts a shape which will be filled
-my_turtle.goto(200, 0) # bottom right
-my_turtle.goto(200, 200) # top right
-my_turtle.goto(0, 200) # top left
-my_turtle.goto(0, 0)  # back to bottom left
-my_turtle.end_fill()
 
-# draw shape using headings
-my_turtle.up()
-my_turtle.goto(-200, 200)
-my_turtle.down()
-my_turtle.setheading(270)  # face south
-my_turtle.fillcolor('blue')
-my_turtle.begin_fill()
 
-# draw octogon
-for i in range(8):
-    my_turtle.forward(50)
-    my_turtle.left(45)
-
-my_turtle.end_fill()
-
-# Recursive rectangle pattern
-my_screen.clear()
 
 def recursive_rect(width, height, depth):
     if depth > 0:
