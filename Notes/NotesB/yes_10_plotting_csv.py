@@ -23,19 +23,26 @@ my_library = monthly_data[library_names.index('Lincoln Park')]
 my_library = [int(x) for x in my_library]
 print(my_library)
 
+library2 = monthly_data[library_names.index('Bucktown-Wicker Park')]
+library2 = [int(x) for x in library2]
+
+
 plt.figure(1, tight_layout=True)
 month_numbers = [x for x in range(12)]
 month_names = headers[4:-1]
 print(month_names)
 
-plt.bar(month_numbers, my_library, color='lightblue', edgecolor='black')
+plt.plot(month_numbers, my_library, color='darkgreen', label='lincon park')
+plt.plot(month_numbers, library2, color='darkblue', label='Wikcerpark')
+
+#plt.bar(month_numbers, my_library, color='lightblue', edgecolor='black')
 plt.xticks(month_numbers, month_names, rotation=45)  # replaces the shown values on the graph axis
 # axis
 
 plt.axis([0, 11, 0, 16000])
 plt.title("Lincon park Library")
 plt.ylabel('Visitors')
-
+plt.legend()
 
 
 
