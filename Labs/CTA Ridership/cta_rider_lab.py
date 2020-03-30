@@ -18,38 +18,40 @@ headers = data.pop(0)
 print(headers)
 
 #1  Make a line plot of rail usage for the last 10 years of data.  (year on x axis, and ridership on y) (5pts)
-data.sort(reverse=True, key=lambda x: int(x[0]))  # sorts by whatever is in there
+data.sort(key=lambda x: int(x[0]))  # sorts by whatever is in there
 print(data)
 
 years = [x[0] for x in data]
-top_ten = years[0:10]
+top_ten = years[-10:]
 print(top_ten)
 
 rail = [int(x[-2]) for x in data]
-rail_ten = rail[0:10]
+rail_ten = rail[-10:]
 print(rail_ten)
 
 
 #2  Plot bus usage for the same years as a second line on your graph. (5pts)
 
 bus = [int(x[1]) for x in data]
-bus_ten = bus[0:10]
+bus_ten = bus[-10:]
 print(bus_ten)
 
 
 
 #3  Plot total usage on a third line on your graph. (5pts)
 total = [int(x[-1]) for x in data]
-total_ten = total[0:10]
+total_ten = total[-10:]
 print(total_ten)
+
 
 
 plt.title("Last ten years transit")
 plt.ylabel('Number of Rides')
 plt.xlabel('Years')
-plt.plot(top_ten, total_ten, color='red', label='bus')
+plt.plot(top_ten, total_ten, color='red', label='total')
 plt.plot(top_ten, rail_ten, color='darkgreen', label='rail')
 plt.plot(top_ten, bus_ten, color='blue', label='bus')
+plt.legend()
 plt.show()
 #4  Add a title and label your axes. (4pts)
 
@@ -60,5 +62,10 @@ plt.show()
 
 #6  What trend or trends do you see in the data?  Offer a hypotheses which might explain the trend(s). Just add a comment here to explain. (2pts)
 
+'''
+When looking at the data is seems that as of recently the number of rides that public transportation have is decreasing
+I belive this is due to a combination of more people walking/riding bikes, mroe people taking their own viechals and 
+and with the new technology more people can work from home so less people new to take public transit
 
+'''
 

@@ -27,3 +27,10 @@ for country in data:
         print(country[0], "data is inadequate.")
 
 print(countries)
+
+plt.figure("Homisides per Firearm")
+plt.scatter(firearms_100, homicide_100k)
+plt.ylabel("homisides per 100k")
+plt.xlabel("firearms per 100k")
+
+plt.show()
