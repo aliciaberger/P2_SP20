@@ -33,6 +33,16 @@ print(countries)
 
 
 
+# best fit line
+p = np.polyfit(firearms_100, homicide_100k, 2)  # (x, y, order)  linear is 1st order
+print(p)
+
+x = [x for x in range(100)]
+y = [p[0] * y + p[1] for y in x]  # linear 1st order
+y = [p[0] * y ** 2 + p[1] * y + p[2] for y in x]  # 2nd order
+
+
+plt.plot(x, y)
 
 
 plt.figure("Homisides per Firearm")
