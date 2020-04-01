@@ -28,9 +28,26 @@ for country in data:
 
 print(countries)
 
+
+
+
+
+
+
+
 plt.figure("Homisides per Firearm")
 plt.scatter(firearms_100, homicide_100k)
 plt.ylabel("homisides per 100k")
 plt.xlabel("firearms per 100k")
+
+
+#best fit line
+p = np.polyfit(firearms_100, homicide_100k, 1) #(x, y, order) linearis first order
+print(p)
+x = [x for x in range(100)]
+y = [p[0] * y + p[1] for y in x]
+
+
+plt.plot(x,y)
 
 plt.show()
