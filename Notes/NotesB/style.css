@@ -1,0 +1,14 @@
+/*This is comment in css*/
+
+p {
+    background-color: light blue;
+}
+
+ol {
+    color: red;
+}
+
+li {
+    border: 2px solid black;
+
+}
