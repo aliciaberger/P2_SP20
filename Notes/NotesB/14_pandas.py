@@ -26,3 +26,20 @@ print(df2)
 
 df3 = pd.read_csv('')
 print(type(df3))
+
+print(df3.head()) #automaticlaly 5 first and taoil is last but cen edit that with a number in the ()
+print(df3.tail(10))
+print(df3.info())
+print(df3.describe()) # gives basic (but like not rly basic) startistics
+
+#useful attributes
+
+print(df3.index)
+print(df3.columns)
+print(list(df3.columns))
+print(df3.dtypes)
+
+# simple selection
+
+print(df3['Wind Speed'])  # index kinda like a dictionary
+print(type(wind_speeds))
