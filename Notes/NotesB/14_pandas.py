@@ -43,3 +43,7 @@ print(df3.dtypes)
 
 print(df3['Wind Speed'])  # index kinda like a dictionary
 print(type(wind_speeds))
+
+# we can also slice the df using .iloc[]
+
+
