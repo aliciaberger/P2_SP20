@@ -21,3 +21,8 @@ d = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 cols = ["A", "B", "C"]
 df2 = pd.DataFrame(data=d, columns=cols)
 print(df2)
+
+# make a df from csv
+
+df3 = pd.read_csv('')
+print(type(df3))
