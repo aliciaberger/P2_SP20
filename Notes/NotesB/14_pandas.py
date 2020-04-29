@@ -49,3 +49,5 @@ print(type(wind_speeds))
 first5_stationnames = df3.iloc[:5, 0] #x then y rows then columns
 print(first5_stationnames)
 
+first_fith_temps = df3.iloc[[0,4], [2,3]]
+print(type(first_fith_temps))
