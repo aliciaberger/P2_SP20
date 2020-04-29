@@ -46,4 +46,6 @@ print(type(wind_speeds))
 
 # we can also slice the df using .iloc[]
 
+first5_stationnames = df3.iloc[:5, 0] #x then y rows then columns
+print(first5_stationnames)
 
