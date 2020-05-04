@@ -10,11 +10,38 @@
 
 # Tricky parts of this one
 ## The location is in tuple format.  If you have trouble converting it, try this:
-my_string = '(41.2, -87.9)'
-my_tuple = eval(my_string)
-print(my_tuple)
-print(type(my_tuple))
+#my_string = '(41.2, -87.9)'
+#my_tuple = eval(my_string)
+#print(my_tuple)
+#print(type(my_tuple))
 
+
+import csv
+import matplotlib.pyplot as plt
+with open("CTA_-_System_Information_-_List_of__L__Stops (1).csv") as f:
+    cr = csv.reader(f)
+    data = list(cr)
+print(len(data))
+headers = data.pop(0)
+print(headers)
+
+stop_name = [x[2] for x in data]
+print(stop_name)
+
+locations_list = []
+
+for x in data:
+    locations_list.append([x[-1] for x in data])
+print(locations_list[:])
+for location in locations_list:
+    print(type(location))
+
+
+#for location in locations_list:
+ #   my_string = eval(locations_list)
+  #  my_tuple = eval(my_string)
+   # print(my_tuple)
+    #print(type(my_tuple))
 
 # If you have extra time, try to put some html into the popup.
 
