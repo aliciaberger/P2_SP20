@@ -37,41 +37,28 @@ print(title.text)
 
 print("\n" * 10)
 days = soup.find_all(class_="day-detail clearfix")
-print(days)
-print(type(days))
+days_list = [x.text for x in days]
 
-synopsis = soup.find(class_="")
-print(days)
-print(type(days))
+infos = soup.find_all("td", class_="description")
+infos_list = [x.text for x in infos]
+
+temps = soup.find_all("td", class_="temp")
+temps_list = [x.text for x in temps]
+
+rains = soup.find_all("td", class_="precip")
+rains_list = [x.text for x in rains]
+
+winds = soup.find_all("td", class_="wind")
+winds_list = [x.text for x in winds]
 
 
-for day in days:
-    print(day.text)
-    print(synopsis.text)
-    print()
+hums = soup.find_all("td", class_="humidity")
+hums_list = [x.text for x in hums]
 
-#by css class
-'''
-print("\n" * 10)
-quotes = soup.find_all(class_="quote")
-print(quotes[0].prettify())
+print("Welcome to the next 10 days of weather in Aachen, the city that has some of the biggest horse shows in the world.")
+print()
+for i in range(10):
+    print("On", days_list[i], "its looks like it will be", infos_list[i], "with the high and low being", temps_list[i], "and the chance of rain being", rains_list[i], ".", "The winds should be", winds_list[i], "with a humitity of", hums_list[i], ".")
 
-# drill down using dot notation
+print("Enjoy your time in aachen. Rain or shine the shows will continue so make sure to grab a good seat.")
 
-print(quotes[0].span)
-print(quotes[0].span.text)
-
-for quote in quotes:
-    print(quote.span.text)
-
-for i in range(len(quotes)):
-    print(quotes[i])
-    print("\t\t---{}".format(authors[i].text))
-    print()
-
-quotes = soup.find_all("span", class_="text", itemprop="text")
-
-for quote in quotes:
-    print(quote.text)
-
-'''
